@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <input type="number" id="input1" value="0">
+    <input type="number" id="input2" value="0">
+    <button id="plus" onclick="addition()">+</button>
+    <button id="minus" onclick="subtraction()">-</button>
+    <button id="multiplication" onclick="multiplication()">*</button>
+    <button id="deduction" onclick="deduction()">/</button>
+    <div id="result">Result: 0</div>
+    
+    <script>
+        function updateResult(value) {
+            document.getElementById('result').innerText = 'Result: ' + value;
+        }
+
+        function addition() {
+            let a = parseFloat(document.getElementById('input1').value);
+            let b = parseFloat(document.getElementById('input2').value);
+            updateResult(a + b);
+        }
+
+        function subtraction() {
+            let a = parseFloat(document.getElementById('input1').value);
+            let b = parseFloat(document.getElementById('input2').value);
+            updateResult(a - b);
+        }
+
+        function multiplication() {
+            let a = parseFloat(document.getElementById('input1').value);
+            let b = parseFloat(document.getElementById('input2').value);
+            updateResult(a * b);
+        }
+
+        function deduction() {
+            let a = parseFloat(document.getElementById('input1').value);
+            let b = parseFloat(document.getElementById('input2').value);
+            if (b !== 0) {
+                updateResult(a / b);
+            } else {
+                updateResult('Error: Division by zero');
+            }
+        }
+    </script>
+</body>
+</html>
