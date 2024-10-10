@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="minus"  onclick="xyz()">-
+
+    </button>
+    <button id="plus"  >+
+
+    </button>
+    <button id="prindo">0
+
+    </button>
+    
+    <script>
+        function addition(){
+            let a=document.getElementById('prindo').innerText;
+            console.log(a);
+            document.getElementById('prindo').innerHTML=parseInt(a)+1;
+        }
+        function xyz(){
+            let a=document.getElementById('prindo').innerText;
+            console.log(a);
+            document.getElementById('prindo').innerHTML=parseInt(a)-1;
+        }
+    </script>
+    <script>
+        document.getElementById('plus').addEventListener("click",addition);
+        let a=123;
+let b=4;
+let c=a+b;
+let d=a.toString+b.toString;
+document.write(c);
+document.write("<br>");
+document.write(d);
+    </script>
+</body>
+</html>
